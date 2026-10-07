@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="weather-card">
+      <div class="header">
+        <div>
+          <p class="eyebrow">WEATHER FINDER</p>
+          <h1>Check the weather</h1>
+          <p class="subtitle">Enter a city to see its current weather conditions.</p>
+        </div>
+        <div class="weather-icon" id="weatherIcon">🌤️</div>
+      </div>
+
+      <form id="weatherForm" class="search">
+        <input id="cityInput" type="text" placeholder="Enter city (e.g. Noida)" autocomplete="off" required />
+        <button type="submit">Search</button>
+      </form>
+
+      <p id="status" class="status"></p>
+
+      <section id="weatherResult" class="result hidden">
+        <div class="location">
+          <h2 id="cityName">—</h2>
+          <p id="condition">—</p>
+        </div>
+
+        <div class="temperature">
+          <span id="temperature">—</span><span class="unit">°C</span>
+        </div>
+
+        <div class="details">
+          <div class="detail">
+            <span>💧</span>
+            <div><small>Humidity</small><strong id="humidity">—</strong></div>
+          </div>
+          <div class="detail">
+            <span>💨</span>
+            <div><small>Wind</small><strong id="wind">—</strong></div>
+          </div>
+          <div class="detail">
+            <span>🌡️</span>
+            <div><small>Feels like</small><strong id="feelsLike">—</strong></div>
+          </div>
+          <div class="detail">
+            <span>📊</span>
+            <div><small>Pressure</small><strong id="pressure">—</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <p class="footer">Weather data powered by OpenWeather.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
